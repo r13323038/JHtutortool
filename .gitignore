@@ -1,0 +1,13 @@
+# Python 虛擬環境
+.venv/
+
+# 環境變數檔（API 金鑰等）
+.env
+
+# Python 編譯產生的快取檔
+__pycache__/
+*.py[cod]
+
+# 系統垃圾檔案
+.DS_Store
+Thumbs.db
