@@ -1,13 +1,25 @@
-# Python 虛擬環境
-.venv/
+# Python
+__pycache__/
+*.pyc
 
-# 環境變數檔（API 金鑰等）
+# VSCode / IDE
+.vscode/
+.idea/
+
+# 本地資料庫 / log
+chroma_db/
+log.json
+
+# 環境設定
 .env
 
-# Python 編譯產生的快取檔
-__pycache__/
-*.py[cod]
+# Docker build caches
+*.log
+*.db
+*.sqlite3
 
-# 系統垃圾檔案
+# Jupyter/Notebook
+.ipynb_checkpoints/
+
+# Mac 系統檔
 .DS_Store
-Thumbs.db
