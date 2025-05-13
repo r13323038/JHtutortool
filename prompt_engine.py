@@ -5,20 +5,15 @@ def generate_prompt(user_question: str, knowledge_list: list[dict]) -> str:
     將使用者問題與 top_k 知識點包裝成 GPT Prompt
     """
 
-    intro = (
-    "請參考以下知識點，並以自己的方式重新說明你認為最重要的觀念。"
-    "由於學生不會看到這些資料，請你用淺顯易懂的語言，融入生活中的比喻或例子，"
-    "幫助國中生理解問題的核心。"
-    "如果學生的問題與學科無關的話，你便不需要參考知識點回答。"
-    )
+    intro = ()
 
 
     question_block = f"\n學生問題：\n{user_question.strip()}"
 
     knowledge_blocks = []
-    for i, k in enumerate(knowledge_list):
-        block = f"\n【知識點 {i+1}】\n標題：{k.get('title', '(無)')}\n說明：{k.get('description', '(無)')}\n例題：{k.get('example', '(無)')}"
-        knowledge_blocks.append(block)
+    # for i, k in enumerate(knowledge_list):
+        # block = f"\n【知識點 {i+1}】\n標題：{k.get('title', '(無)')}\n說明：{k.get('description', '(無)')}\n例題：{k.get('example', '(無)')}"
+        # knowledge_blocks.append(block)
 
     full_prompt = intro + question_block + "\n\n參考知識點：" + "".join(knowledge_blocks)
 
