@@ -112,5 +112,3 @@ _OPENAI_API_KEY=sk-xxxxx
 * `.env` 不應推上 Git（記得加進 .gitignore）
 
 ---
-
-🧠 本文件可當作部署參考，或 README 使用！

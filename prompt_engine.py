@@ -5,7 +5,7 @@ def generate_prompt(user_question: str, knowledge_list: list[dict]) -> str:
     將使用者問題與 top_k 知識點包裝成 GPT Prompt
     """
 
-    intro = ()
+    intro = ("請對以下內容進行回答")
 
 
     question_block = f"\n學生問題：\n{user_question.strip()}"
@@ -15,7 +15,8 @@ def generate_prompt(user_question: str, knowledge_list: list[dict]) -> str:
         # block = f"\n【知識點 {i+1}】\n標題：{k.get('title', '(無)')}\n說明：{k.get('description', '(無)')}\n例題：{k.get('example', '(無)')}"
         # knowledge_blocks.append(block)
 
-    full_prompt = intro + question_block + "\n\n參考知識點：" + "".join(knowledge_blocks)
+    # full_prompt = intro + question_block + "\n\n參考知識點：" + "".join(knowledge_blocks)
+    full_prompt = intro + question_block + "\n\n參考知識點："
 
     return full_prompt
 
