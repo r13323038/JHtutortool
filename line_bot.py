@@ -53,11 +53,13 @@ def handle_message(event):
 def log_interaction(question, knowledge, answer):
     pass
 
-# ✅ 最重要：確保監聽 0.0.0.0:8080
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
 # Health Check
 @app.route("/ping", methods=["GET"])
 def ping():
     return "pong"
+
+
+# ✅ 最重要：確保監聽 0.0.0.0:8080
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
